@@ -1,17 +1,48 @@
-## DSCI 310 individual assignment on Quarto reproducible reports using R
+## DSCI 522 individual assignment on Quarto reproducible reports using Python
 
 This is a template repository 
 for the individual assignment on Quarto reproducible reports using Python
-from the DSCI 310 (Trustworthy workflows for data science) course.
-Instructions for this assignment can be found on the DSCI 310 course website 
-[here](https://ubc-dsci.github.io/dsci-310-student/individual_assignment4).
+from the DSCI 522 (Workflows for data science) course.
+Instructions for this assignment can be found on the DSCI 533 course website.
 
 ### Dependencies
 
-To complete this assignment you will need to install:
-- GNU Make
-- Quarto
-- Python programming language and Python packages specified in the [`environment.yml`](environment.yml) file
+- [Docker](https://www.docker.com/) 
+
+### Usage
+
+#### Setup
+
+> If you are using Windows or Mac, make sure Docker Desktop is running.
+
+1. Clone this GitHub repository.
+
+#### Running the analysis
+
+1. Navigate to the root of this project on your computer using the
+   command line and enter the following command:
+
+``` 
+docker compose up
+```
+
+2. In the terminal, look for a URL that starts with 
+`http://127.0.0.1:8888/lab?token=` 
+(for an example, see the highlighted text in the terminal below). 
+Copy and paste that URL into your browser.
+
+<img src="img/jupyter-container-web-app-launch-url.png" width=400>
+
+3. To run the analysis,
+open a terminal and run the following commands:
+
+```
+python source/generate_figures.py --input_dir="data/00030067-eng.csv" \
+    --out_dir="results"
+
+quarto render reports/qmd_example.qmd --to html
+quarto render reports/qmd_example.qmd --to pdf
+```
 
 ### License:
 The non-software content of this template repository is licensed under the 
