@@ -37,7 +37,7 @@ Copy and paste that URL into your browser.
 open a terminal and run the following commands:
 
 ```
-python source/generate_figures.py --input_dir="data/00030067-eng.csv" \
+python scripts/generate_figures.py --input_dir="data/00030067-eng.csv" \
     --out_dir="results"
 
 quarto render reports/qmd_example.qmd --to html
