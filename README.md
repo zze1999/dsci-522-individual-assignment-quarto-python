@@ -3,7 +3,7 @@
 This is a template repository 
 for the individual assignment on Quarto reproducible reports using Python
 from the DSCI 522 (Workflows for data science) course.
-Instructions for this assignment can be found on the DSCI 533 course website.
+Instructions for this assignment can be found on the DSCI 522 course website.
 
 ### Dependencies
 
