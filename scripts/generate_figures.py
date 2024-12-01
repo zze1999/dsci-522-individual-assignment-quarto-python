@@ -6,7 +6,6 @@
 import click
 import pandas as pd
 import altair as alt
-#from altair_saver import save
 import os
 
 # Ensure Altair charts can be saved as PNG
@@ -26,7 +25,7 @@ def main(input_dir, out_dir):
 
     # Load the data and do some pre-processing
     horse_pop = pd.read_csv(input_dir)
-    horse_pop = horse_pop.query('DATE == "At June 1 (x 1,000)" and GEO != "Canada"')
+    horse_pop = horse_pop.query('DATE == "At June 1 (x 1,000)" and GEO != "Canada"').copy()
     horse_pop['GEO'] = horse_pop['GEO'].replace({"Prince Edward Island": "P.E.I."})
     horse_pop['Value'] = horse_pop['Value'] * 1000
     horse_pop['Ref_Date'] = horse_pop['Ref_Date'].astype(str)
