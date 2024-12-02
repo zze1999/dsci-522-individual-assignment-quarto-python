@@ -34,7 +34,7 @@ Copy and paste that URL into your browser.
 <img src="img/jupyter-container-web-app-launch-url.png" width=400>
 
 3. To run the analysis,
-open a terminal and run the following commands:
+open a terminal (in the docker jupyter lab) and run the following commands:
 
 ```
 python scripts/generate_figures.py --input_dir="data/00030067-eng.csv" \
